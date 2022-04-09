@@ -1,0 +1,67 @@
+:root {
+    --tempt-border: 3px solid black;
+}
+
+body {
+    margin: 2vw;
+    font-family: 'Oxygen', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    border: var(--tempt-border);
+    color: white;
+    background: linear-gradient(to right, rgb(3, 100, 210), rgb(45, 8, 137));
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    margin: 2vw;
+    max-width: 20em;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    border: var(--tempt-border);
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 17em;
+}
+
+input {
+    margin: .5em;
+    border-radius: 5px;
+}
+
+ul {
+    width: 15em;
+}
+
+li {
+    float: left;
+    list-style-type: none;
+    margin: .5em;
+    border: 1px solid black;
+    text-align: center;
+    width: 15em;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: rgb(83, 130, 250);
+}
+
+.weather {
+    border: var(--tempt-border);
+    float: right;
+    width: 60vw;
+    height: 35vw;
+    min-width: 40vw;
+}
