@@ -14,31 +14,33 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <section class="container">  
-        <h2 class="city">Search for a City</h2>
-        <form>
-            <input type="text" name="city" placeholder="City">
-            <input class="btn" type="submit" value="Search">
+    <main>  
+        <form id="searchForm">
+            <h2 class="city">Search for a City</h2>
+            <input type="text" id="searchBar" placeholder="City">
+            <input id="searchBtn" type="submit" value="Search">
         </form>
-        <ul>
-            <li>City</li>
-            <li>City</li>
-            <li>City</li>
-            <li>City</li>
-            <li>City</li>
-            <li>City</li>
-            <li>City</li>
-        </ul>
-    </section>
-    <div class="weather">
-        <div class="card">
-            <h2>Weather</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia!</p>
-        </div>
-    </div>
-    <section class="5day card">
+        <hr>
+        <ul id="pastSearch"></ul>
+    </main>
 
+<!--current city conditions-->
+    <section class="curWeather">
+        <!--Today-->
+        <div id="currentCity">
+            <h2>Weather</h2>
+            <ul id="currentInfo">
+        </div>
     </section>
+<!--5 day cards-->
+    <div>
+        <h3>5-Day Forecast:</h3>
+        <div id="5days"></div>
+    </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js" > </script>
+
 </body>
-<script src="./assets/script.js" > </script>
+
 </html>

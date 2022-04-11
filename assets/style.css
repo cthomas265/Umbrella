@@ -1,6 +1,4 @@
-:root {
-    --tempt-border: 3px solid black;
-}
+
 
 body {
     margin: 2vw;
@@ -10,25 +8,44 @@ body {
 }
 
 header {
-    border: var(--tempt-border);
     color: white;
     background: linear-gradient(to right, rgb(3, 100, 210), rgb(45, 8, 137));
-    display: flex;
-    justify-content: center;
-    margin: 0;
+    text-align: center;
+    padding: 10px;
 }
 
-.container {
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#searchForm {
     margin: 2vw;
     max-width: 20em;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-    border: var(--tempt-border);
 }
 
 h2 {
     font-size: 1.75rem;
+    margin: .5em;
+}
+
+#searchBtn {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #5aa2e9;
+
+}
+
+#pastSearch li {
+    list-style-type: none;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #5aa2e9;
+    color: white;
+    cursor: pointer;
 }
 
 form {
@@ -49,19 +66,13 @@ ul {
 li {
     float: left;
     list-style-type: none;
-    margin: .5em;
-    border: 1px solid black;
-    text-align: center;
-    width: 15em;
-    font-size: 1rem;
-    border-radius: 5px;
+    font-size: 25px;
     background-color: rgb(83, 130, 250);
 }
 
-.weather {
-    border: var(--tempt-border);
-    float: right;
-    width: 60vw;
+.curWeather {
+    width: 60%;
     height: 35vw;
     min-width: 40vw;
 }
+
