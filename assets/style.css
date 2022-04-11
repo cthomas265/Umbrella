@@ -54,6 +54,11 @@ form {
     width: 17em;
 }
 
+.curWeather {
+    margin: 0 20px;
+    width: 17em;
+}
+
 input {
     margin: .5em;
     border-radius: 5px;
@@ -63,10 +68,7 @@ ul {
     width: 15em;
 }
 
-li {
-    float: left;
-    list-style-type: none;
-    font-size: 25px;
+#5days{
     background-color: rgb(83, 130, 250);
 }
 
