@@ -1,8 +1,8 @@
 var apiKey = 'ea52895286adcad8d4523f39e7547325'
 var storeCity = localStorage.getItem('city');
-var searchedCity = document.getElementyId('pastSearch');
+var searchedCity = document.getElementById('pastSearch');
 
-document.getElementyId('searchBtn').addEventListener('submit', function (event) {
+document.getElementById('searchBtn').addEventListener('submit', function (event) {
     event.preventDefault();
     document.getElementById
     var city = document.getElementById('city').value;
@@ -143,4 +143,4 @@ function futureWeather(data) {
     }
 };
 
-displaySearch();
+// displaySearch();
