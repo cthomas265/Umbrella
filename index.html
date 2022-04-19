@@ -14,22 +14,25 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <main>  
-        <form id="searchForm">
-            <h2 class="city">Search for a City</h2>
-            <input type="text" id="searchBar" placeholder="City">
-            <input id="searchBtn" type="submit" value="Search">
-        </form>
+    <main class="container">  
+
+        <div id="searchForm" class="col-4">
+            <h2>Search for a City</h2>
+            <label id="city"></label>
+            <input type="text" id="searchBar" placeholder="Green Bay">
+            <button id="searchBtn" type="submit" value="Search">Search</button>
+        </div>
+
         <hr>
-        <ul id="pastSearch"></ul>
+        <ul id="past"></ul>
     </main>
 
-<!--current city conditions-->
-    <section class="curWeather">
+    <!--current city conditions-->
+    <section id="curWeather">
         <!--Today-->
         <div id="currentCity">
             <h2>Weather</h2>
-            <ul id="currentInfo">
+            <ul id="currentInfo"></ul>
         </div>
     </section>
 <!--5 day cards-->
@@ -38,8 +41,9 @@
         <div id="5days"></div>
     </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/script.js" > </script>
+    <script src="./assets/script.js"> </script>
 
 </body>
 
