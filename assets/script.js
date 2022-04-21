@@ -6,7 +6,6 @@ $(document).ready(function() {
     $('#searchBtn').on('click', function(){
         var searchValue = $('#searchBar').val();
 
-        // document.getElementById('city').val('');
 
         console.log(searchValue)
         //search weather
@@ -18,12 +17,8 @@ $(document).ready(function() {
         searchWeather($(this).text());
     });
 
-
+//save search to local storage
 function saveSearch (searchValue) {
-    // if (!storedCity) {
-    //     localStorage.setItem('city', JSON.stringify(searchValue));
-    //     return;
-    // }
 
     storedCity.push(searchValue);
     localStorage.setItem('city', JSON.stringify(storedCity));
@@ -32,14 +27,18 @@ function saveSearch (searchValue) {
 document.getElementById('past').addEventListener('click', function (event) {
     var city = event.target.innerText;
     document.getElementById('currentInfo').innerHTML = '';
-    getLocation(city);
+    searchValue(city);
 });
 
+//create past location list
     function makeRow(text) {
-        var li = $('<li>').addClass('list-group-item list-group-item-action').text(text);
+        var li = $('<button>').addClass('list-group-item list-group-item-action').text(text);           
         $('#past').append(li);
+
     }
 
+
+//ajax to auto reload page with coordinates
 function getCord(searchValue) {
     $.ajax({
         type: "GET",
@@ -55,8 +54,8 @@ function getCord(searchValue) {
 }
 
 
+//ajax to get current weather
 function searchWeather (lat, lon) {
-// var apiUrl = 'api.openweathermap.org/data/2.5/forecast?' + searchCity + '&appid' +apiKey;
 
     $.ajax({
         type: "GET",
@@ -103,23 +102,12 @@ function searchWeather (lat, lon) {
         currentCon.appendChild(uvIndex);
     
     
-    })
+    });
 
-        // success: function(data) {
-        //     if (history.indexIf(searchValue) === -1) {
-        //         past.push(searchValue);
-        //         window.localStorage.setItem("past", JSON.stringify(past));
 
-        //         makeRow(searchValue);
-        //     }
-        //     $('#5days').empty();
+};
 
-        //     console.log(data)
-
-    //     }
-    // }) 
-}
-
+//future weather
 function futWeather (lat, lon) {
     
         $.ajax({
@@ -132,9 +120,9 @@ function futWeather (lat, lon) {
 
     var futureCon = document.getElementById('5days');
     futureCon.innerHTML = "";
-    for (var i = 1; i < 5; i++) {
+    for (var i = 1; i < 6; i++) {
         var card = document.createElement('div');
-        card.setAttribute('class', 'card');
+        card.setAttribute('class', 'card text-white bg-primary row');
         var futDate = document.createElement('h4');
         var futIcon = document.createElement('img');
         var futTemp = document.createElement('p');

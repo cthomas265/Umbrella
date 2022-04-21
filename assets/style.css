@@ -3,8 +3,6 @@
 body {
     margin: 2vw;
     font-family: 'Oxygen', sans-serif;
-    display: flex;
-    flex-direction: column;
 }
 
 header {
@@ -17,11 +15,13 @@ header {
 main {
     display: block;
     width: fit-content;
+    height: 400px;
 }
 
 #searchForm {
     margin: 2vw;
     max-width: 20em;
+
 }
 
 h2 {
@@ -29,22 +29,36 @@ h2 {
     margin: .5em;
 }
 
-#searchBtn {
-    margin: 5px;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #5aa2e9;
+#searchForm input {
+    width: 100%;
+    padding: .5em;
+    margin: .5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 
 }
 
-#pastSearch li {
-    list-style-type: none;
-    margin: 5px;
-    padding: 5px;
+#past {
+    height: relative;
+}
+#searchBtn, #past button  {
+    background: linear-gradient(to right, rgb(3, 100, 210), rgb(45, 8, 137));
+    margin: 5px 0;
     border-radius: 5px;
-    background-color: #5aa2e9;
+    padding: 5px;
     color: white;
+    font-size: 1.25rem;
     cursor: pointer;
+    width: 100%;
+}
+
+
+.list-group-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    
 }
 
 form {
@@ -53,9 +67,11 @@ form {
     width: 17em;
 }
 
-.curWeather {
-    margin: 0 20px;
-    width: 17em;
+#curWeather, .future {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 10px 0 0 0;
 }
 
 input {
@@ -67,13 +83,19 @@ ul {
     width: 15em;
 }
 
-#5days{
-    background-color: rgb(83, 130, 250);
+.card {
+    background: rgb(83, 130, 250);
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: .5em;
 }
 
-.curWeather {
-    width: 60%;
+#curWeather {
     height: 35vw;
     min-width: 40vw;
+    border: 2px solid black ;
 }
 
+#future {
+
+}
