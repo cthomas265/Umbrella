@@ -112,7 +112,7 @@ function futWeather (lat, lon) {
     
         $.ajax({
             type: "GET",
-            url: 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&exclude=current, hourly, minutely' + '&appid=' + apiKey
+            url: 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&exclude=current, hourly, minutely' + '&appid=' + apiKey  + '&units=imperial'
         }) .then(data => {console.log(data)  
         
             var forecast = data.daily;
