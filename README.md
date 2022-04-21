@@ -10,4 +10,4 @@ Umbrella is a general weather dashboard to search local weather.
 
 Deployed-https://cthomas265.github.io/Umbrella/
 
-![image](https://user-images.githubusercontent.com/98835210/163062042-7d21bed9-0f6f-4021-9453-a22c00506303.png)
+![image](https://user-images.githubusercontent.com/98835210/164368838-0d7b6aa4-99e8-43d0-89fc-ddc94cee53ed.png)
